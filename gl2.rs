@@ -1013,6 +1013,7 @@ pub fn vertex_attrib_pointer_u8(index: GLuint,
 
 #[cfg(not(target_os="macos"))]
 #[cfg(not(mac_10_6))]
+#[cfg(not(mac_10_7))]
 pub fn vertex_attrib_divisor(index: GLuint, divisor: GLuint) {
     unsafe {
         glVertexAttribDivisor(index, divisor);
@@ -1347,6 +1348,7 @@ pub fn glVertexAttribPointer(indx: GLuint, size: GLint, _type: GLenum, normalize
 
 #[cfg(not(target_os="macos"))]
 #[cfg(not(mac_10_6))]
+#[cfg(not(mac_10_7))]
 pub fn glVertexAttribDivisor(indx: GLuint, divisor: GLuint);
 
 pub fn glViewport(x: GLint, y: GLint, width: GLsizei, height: GLsizei);
